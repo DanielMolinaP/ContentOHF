@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000'; // Reemplaza con la URL de tu API backend
+const API_BASE_URL = 'http://localhost:5000'; 
 
 const TaskForm = ({ addTask }) => {
   const [title, setTitle] = useState('');
@@ -20,7 +20,6 @@ const TaskForm = ({ addTask }) => {
       setTitle('');
     } catch (error) {
       console.error('Error adding task:', error);
-      // Aquí puedes manejar el error y mostrar un mensaje al usuario
     }
   };
 

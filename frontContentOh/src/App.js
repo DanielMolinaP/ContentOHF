@@ -4,7 +4,7 @@ import TaskList from './componets/TaskList';
 import TaskForm from './componets/TaskForm';
 import './App.css'; // Archivo para estilos personalizados
 
-const API_BASE_URL = 'http://localhost:5000'; // Reemplaza con la URL de tu API backend
+const API_BASE_URL = 'http://localhost:5000';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -20,7 +20,6 @@ function App() {
       setTasks(response.data);
     } catch (error) {
       console.error('Error fetching tasks:', error);
-      // Aquí puedes manejar el error y mostrar un mensaje al usuario
     }
   };
 
@@ -31,7 +30,6 @@ function App() {
       setTasks([...tasks, response.data]);
     } catch (error) {
       console.error('Error adding task:', error);
-      // Aquí puedes manejar el error y mostrar un mensaje al usuario
     }
   };
 
@@ -43,7 +41,6 @@ function App() {
       setTasks(updatedTasks);
     } catch (error) {
       console.error('Error deleting task:', error);
-      // Aquí puedes manejar el error y mostrar un mensaje al usuario
     }
   };
 
@@ -60,7 +57,6 @@ function App() {
       setTasks(updatedTasks);
     } catch (error) {
       console.error('Error completing task:', error);
-      // Aquí puedes manejar el error y mostrar un mensaje al usuario
     }
   };
 
