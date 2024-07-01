@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000'; 
+//const API_BASE_URL = 'http://localhost:5000'; 
 
 const TaskForm = ({ addTask }) => {
   const [title, setTitle] = useState('');
@@ -15,8 +15,8 @@ const TaskForm = ({ addTask }) => {
     };
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/api/tasks`, newTask);
-      addTask(response.data);
+      //const response = await axios.post(`${API_BASE_URL}/api/tasks`, newTask);
+      addTask(newTask);
       setTitle('');
     } catch (error) {
       console.error('Error adding task:', error);
